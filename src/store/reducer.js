@@ -4,7 +4,7 @@ const initialState = {
 };
 
 // == Types
-const DO_SOMETHING = 'DO_SOMETHING';
+export const FETCH_DATA = 'FETCH_DATA';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -21,9 +21,8 @@ const reducer = (state = initialState, action = {}) => {
 };
 
 // == Action Creators
-export const doSomething = message => ({
-  type: DO_SOMETHING,
-  message,
+export const fetchData = () => ({
+  type: FETCH_DATA,
 });
 
 

@@ -1,6 +1,17 @@
 @import 'reset';
 @import 'vars';
 
-body {
-  font-family: sans-serif;
+@font-face {
+  font-family: 'elise';
+  src:url('http://elise.local/wp-content/themes/ELISE/asset/polices/elisegrotesque2-webfont.woff') format('woff');
+}
+
+html,body {
+  text-align: center;
+  font-family: 'elise', sans-serif; 
+  text-transform: uppercase; 
+  position: relative; 
+  margin: 0; 
+  width: 100%;   
+  height: 100%; 
 }

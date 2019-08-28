@@ -1,0 +1,42 @@
+#navigation .container {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  max-width: none; 
+}
+
+#navigation .container .row {
+  margin: 0;
+
+}
+
+#navigation .container .row .searchPart {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding: 0; 
+} 
+
+#navigation .container .row .searchPart .form-group {
+  padding-left: 0; 
+  text-align: left; 
+}
+
+#navigation .container .row .searchPart .form-group .form-label {
+  font-family: sans-serif; 
+  font-size: 0.4em; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 4px; 
+  padding-bottom: 4px; 
+}
+
+#navigation .container .row .searchPart .button {
+  display: flex;
+  align-items: center;
+  transform: translateY(3.5px);
+  font-size: 92%;
+  padding-right: 15px;
+}
+
