@@ -2,16 +2,37 @@
 @import 'vars';
 
 @font-face {
-  font-family: 'elise';
-  src:url('http://elise.local/wp-content/themes/ELISE/asset/polices/elisegrotesque2-webfont.woff') format('woff');
+  font-family: 'Syndicat';
+  src:
+    url('http://eliseaccart.com/wp-content/themes/ELISE/assets/fonts/SyndicatGrotesk-Regular.woff2') format('woff2'),
+    url('http://eliseaccart.com/wp-content/themes/ELISE/assets/fonts/SyndicatGrotesk-Regular.woff') format('woff'),
+    url('http://eliseaccart.com/wp-content/themes/ELISE/assets/fonts/SyndicatGrotesk-Regular.otf') format('otf');
+  unicode-range: U+000-5FF;
+
 }
 
 html,body {
   text-align: center;
-  font-family: 'elise', sans-serif; 
+  font-family: 'Syndicat', sans-serif; 
   text-transform: uppercase; 
   position: relative; 
+  font-size: 0.95em;
   margin: 0; 
   width: 100%;   
   height: 100%; 
 }
+
+
+@media screen and (max-width: 768px) { 
+  body {
+    font-size: 1em; 
+  }
+}
+
+@media screen and (min-width: 768px) { 
+  html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+

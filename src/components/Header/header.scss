@@ -1,12 +1,113 @@
-@font-face {
-  font-family: 'elise';
-  src:url('/assets/fonts/elisegrotesque2-webfont.woff') format('woff');
+#header {
+  position: fixed; 
+  z-index:1;
+}
+#header .white {
+  width: 100%;
+  height: 1.2em;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  z-index: -1;
 }
 
-h1 {
+#header #title {
+  position: fixed;
+  top: 0;
   font-size: 1em;
   color: black;
-  font-weight: 500;
-  line-height: 1.25;
+  line-height: 1.2;
   text-align: left;
+  z-index: 100;
+  padding-left: 0.7em;
+}
+
+#header #contact {
+  display: none;
+}
+
+#header .return.aboutShow,
+#header .contact {
+  display: inline;
+  position: fixed; 
+  font-size: 1em;
+  top: 0.07em; 
+  right: 50.5%;
+  z-index: 100; 
+  cursor: pointer;
+}
+#header .return,
+#header .contact.aboutShow {
+  display: none;  
+}
+
+@keyframes returnArrow {
+  0% {
+    transform: translate(0px,-3.9px)
+  }
+  50% {
+    transform: translate(-5px,-3.9px)
+  }
+  100% {
+    transform: translate(0px,-3.9px)
+  }
+}
+
+#header .return.aboutShow {
+  animation: returnArrow 0.8s ease-in-out;
+  font-size: 1.2em;
+  transform: translate(0px,-3.9px);
+}
+#header .top {
+  display: block;
+  position: fixed;
+  bottom: 0.27em;
+  right: 0.7em;
+  z-index: 1;
+}
+#header .top span {
+  font-size: 1.2em;
+  transform: translate(-3.9px, 0);
+}
+#header .top:hover {
+  cursor: pointer; 
+}
+// #header .top:hover {
+//   display: block;
+//   position: fixed;
+//   top: 0.1em;
+//   right: 0.7em;
+//   font-size: 1.2em;
+//   z-index: 1;
+// }
+
+#header .top.aboutShow {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) { 
+
+  #header #title {
+    top: 0.08em;
+  }
+
+  #header .return.aboutShow, 
+  #header .contact {
+    top: .2025em;
+    right: 3.5%;
+  }
+
+  #header .white {
+    height: 1.4em;
+  }
+
+  #header .top {
+    bottom: 0.245em;
+  }
+
+  #header .top span {
+    font-size: 1.09em;
+  }
+
 }

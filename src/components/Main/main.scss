@@ -1,0 +1,230 @@
+#main .container {
+  padding: 0; 
+  margin: 0; 
+  max-width: none;
+}
+#main .container .row {
+  margin: 0.4em; 
+  overflow: hidden;
+  padding-bottom: 1em;
+}
+
+#main #firstCol, 
+#main #secondCol,
+#main #thirdCol {
+  padding: 0 0.4em;
+  position: relative; 
+}
+@keyframes wheelHueColor {
+  from, to { color: hsl(324, 90%, 62%); }
+  10%      { color: rgb(255, 57, 57); }
+  20%      { color: rgb(252, 164, 31); }
+  30%      { color: rgb(194, 234, 36); }
+  40%      { color: hsl(108, 81%, 55%); }
+  50%      { color: hsl(144, 86%, 54%); }
+  60%      { color: hsl(180, 90%, 56%); }
+  70%      { color: hsl(216, 94%, 60%); }
+  80%      { color: hsl(252, 92%, 59%); }
+  90%      { color: hsl(288, 88%, 58%); }
+}
+
+#main .decoration {
+  height: 100%; 
+  width: 100%; 
+  color: white;
+//  animation: wheelHueColor 1s infinite;
+  background-color: currentColor;
+  background-image: url("http://eliseaccart.com/wp-content/themes/ELISE/assets/images/motif5.png");
+  background-size: 100.25%;
+  z-index: -1; 
+}
+
+#main .container .row .imageContainer
+{
+  margin-bottom: 0.7em;
+  cursor: pointer;
+}
+#main .container .row .imageContainer img {
+  width: 100%; 
+}
+
+#main .container .row .iContainer {
+  position: relative;
+}
+
+#main .container .row .iframeContainer {
+  position: relative;
+  padding-bottom: 73.67%;
+  height: 0;
+  overflow: hidden;
+  // transform: translateY(-0.3em);
+}
+
+#main .container .col-lg-6.col-md-6.col-12  .iframeContainer, 
+#main .container .row.col-lg-6.col-md-8.col-12  .iframeContainer {
+  padding-bottom: 60.5%;
+}
+#main .container .row .col-lg-4.col-md-4.col-12 .iframeContainer,
+#main .container .row .col-lg-4.col-md-6.col-12 .iframeContainer {
+  padding-bottom: 61.5%;
+  transform: translateY(-6.5px);
+}
+#main .container .row .col-lg-2.col-md-0.col-0 .iframeContainer {
+  padding-bottom: 63%;
+    transform: translateY(-8.5px);
+}
+
+
+#main .container .row .col-lg-4.col-md-6.col-12 .iContainer .buttonUp,
+#main .container .row .col-lg-2.col-md-0.col-0 .iContainer .buttonUp, 
+#main .container .row .col-lg-4.col-md-4.col-12 .iContainer .buttonUp{
+  z-index: 100;
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  top:0;
+}
+#main .container .row .col-lg-6.col-md-6.col-12 .iContainer .buttonUp,
+#main .container .row .col-lg-6.col-md-8.col-12 .iContainer .buttonUp {
+  width: 0%; 
+  height: 0%;
+}
+
+
+
+#main .container .row iframe {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+#main .container .row .title {
+  position: fixed;
+  display: none; 
+  top: 0.08rem;
+  z-index: 200;
+  right: 0;
+  width: 50%;
+}
+
+#main .container .row .iContainer:hover .title,
+#main .container .row .imageContainer:hover .title
+{
+  display: block; 
+}
+
+#main .container .row.aboutShowTitle .iContainer:hover .title,
+#main .container .row.aboutShowTitle .imageContainer:hover .title
+{
+  display: none;
+}
+
+#main #about.aboutShow  {
+  display: block;
+  width: 49%;
+  text-align: right;
+  line-height: 1.1;
+  z-index: 1;
+  position: fixed;
+  top: 0.2em;
+  right: 0.8em;
+  padding: 0; 
+}
+#main #about.aboutShow .credit {
+  margin-top: 20em;
+  font-size: 0.2em;
+  text-transform: none;
+  line-height: 1.3;
+}
+
+#main #about{
+  display: none; 
+}
+
+#main .aboutShow {
+  display: none; 
+}
+
+#main .clients {
+  text-align: center;
+  position: fixed; 
+  bottom: 0; 
+  padding-right: 0.8em;
+  padding-left: 0.8em;
+}
+
+
+@media screen and (max-width: 768px) { 
+  #main .container .row .title {
+    top: 36.2rem;
+    justify-content: center;
+    width: 100%;
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+
+  #main #about.aboutShow {
+    top: 1.3em;
+    right: 0.7em;
+    width: 100%;
+  }
+  #main .clients {
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 3em 1em;
+  }
+
+  @keyframes blurAnim {
+    0% {
+      opacity: 0; 
+      filter : blur(20px);
+    }
+    100% {
+      opacity: 1; 
+      filter : blur(0px);
+    }
+  }
+
+  #main.aboutShow .container .row #firstCol {
+    animation: blurAnim 40s ease; 
+    opacity: 1;
+    filter : blur(0px);
+  }
+  #main .container .row #firstCol .iframeContainer,
+  #main .container .row #secondCol .iframeContainer,
+  #main .container .row #thirdCol .iframeContainer {
+    transform: translateY(-10px);
+    padding-bottom: 60%;
+  }
+  
+  #main .container .row #firstCol {
+    padding-top: 1em;
+  }
+  #main #firstCol, 
+  #main #secondCol,
+  #main #thirdCol {
+    padding: 0 0.4em;
+  }
+
+  #main .decoration {
+    display: none; 
+  }
+  #main #about.aboutShow .credit {
+    margin-top: 11em;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+  #main .container .row .col-lg-4.col-md-4.col-12 .iframeContainer,
+  #main .container .row .col-lg-4.col-md-6.col-12 .iframeContainer {
+    padding-bottom: 70%;
+    transform: translateY(-1.2px);
+  }
+
+}
