@@ -61,7 +61,7 @@
     "http-proxy-middleware": "^0.19.1",
     "in-view": "^0.6.1",
     "infinite-scroll": "^3.0.6",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.12",
