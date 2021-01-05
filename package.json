@@ -53,7 +53,7 @@
   "dependencies": {
     "@material-ui/icons": "^4.4.1",
     "@vimeo/player": "^2.10.0",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "axios-progress-bar": "^1.2.0",
     "boostrap": "^2.0.0",
     "bootstrap": "^4.3.1",
